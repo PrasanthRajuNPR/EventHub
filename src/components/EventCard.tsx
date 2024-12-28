@@ -20,7 +20,7 @@ export default function EventCard({ event }: EventCardProps) {
             alt={event.title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
           />
-          <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+          <div className="absolute top-4 right-4 bg-white dark:text-white dark:bg-gray-800 px-3 py-1 rounded-full text-sm font-medium">
             {event.category}
           </div>
           {isRegistered && (
