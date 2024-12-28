@@ -21,7 +21,7 @@ export default function Navbar() {
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle theme"
             >
-              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {darkMode ? <Sun className="w-5 h-5" color="white"/> : <Moon className="w-5 h-5" />}
             </button>
 
             <div className="relative">
@@ -30,7 +30,7 @@ export default function Navbar() {
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="User menu"
               >
-                <User className="w-5 h-5" />
+                {darkMode ? <User className="w-5 h-5" color="white"/> : <User className="w-5 h-5" color="black"/>}
               </button>
 
               {isMenuOpen && (
