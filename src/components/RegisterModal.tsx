@@ -30,59 +30,83 @@ export default function RegisterModal({ event, onClose, onRegister }: RegisterMo
         >
           <X className="w-5 h-5" />
         </button>
+        <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text mb-4">
+  Register for {event.title}
+</h2>
 
-        <h2 className="text-2xl font-bold mb-4 dark:text-white">Register for {event.title}</h2>
-        
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            />
-          </div>
+<form 
+  onSubmit={handleSubmit} 
+  className="bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 p-4 rounded-lg shadow-md space-y-4 max-w-sm mx-auto border border-gray-200 dark:border-gray-700"
+>
+  <div className="relative">
+    <label 
+      htmlFor="name" 
+      className="block text-xs font-medium text-gray-600 dark:text-gray-300"
+    >
+      Full Name
+    </label>
+    <input
+      type="text"
+      id="name"
+      required
+      className="mt-2 block w-full px-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 shadow-sm border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 
+      hover:border-blue-500 hover:ring-2 hover:ring-blue-300 
+      transform hover:scale-105 transition-all duration-300 ease-in-out"
+      value={formData.name}
+      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+      placeholder="Enter your full name"
+    />
+  </div>
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            />
-          </div>
+  <div className="relative">
+    <label 
+      htmlFor="email" 
+      className="block text-xs font-medium text-gray-600 dark:text-gray-300"
+    >
+      Email
+    </label>
+    <input
+      type="email"
+      id="email"
+      required
+      className="mt-2 block w-full px-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 shadow-sm border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 
+      hover:border-blue-500 hover:ring-2 hover:ring-blue-300 
+      transform hover:scale-105 transition-all duration-300 ease-in-out"
+      value={formData.email}
+      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+      placeholder="Enter your email address"
+    />
+  </div>
 
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            />
-          </div>
+  <div className="relative">
+    <label 
+      htmlFor="phone" 
+      className="block text-xs font-medium text-gray-600 dark:text-gray-300"
+    >
+      Phone Number
+    </label>
+    <input
+      type="tel"
+      id="phone"
+      required
+      className="mt-2 block w-full px-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 shadow-sm border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 
+      hover:border-blue-500 hover:ring-2 hover:ring-blue-300 
+      transform hover:scale-105 transition-all duration-300 ease-in-out"
+      value={formData.phone}
+      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+      placeholder="Enter your phone number"
+    />
+  </div>
 
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Complete Registration
-          </button>
-        </form>
+  <button
+    type="submit"
+    className="w-full py-2 px-4 rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold shadow-sm hover:shadow-md hover:from-blue-600 hover:to-cyan-600 transition-all"
+  >
+    Complete Registration
+  </button>
+</form>
+
+
       </div>
     </div>
   );
